@@ -1,4 +1,8 @@
-const cTest = require('./controller/testController');
+/**
+ * protocol dispatcher
+ * 프로토콜과 컨트롤러 연결해주는 dispatcher
+ */
+const cTest = require('../controller/testController');
 const dispatcher = require('../../common/server/dispatcher');
 
 class testDispatcher extends dispatcher {
@@ -8,7 +12,8 @@ class testDispatcher extends dispatcher {
 
     init() {
         this.func = [
-            cTest
+            // controller 추가
+            cTest   // 0 번
         ];
     }
 }

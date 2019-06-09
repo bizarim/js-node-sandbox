@@ -20,38 +20,35 @@ class globalLoader extends ILoader {
         }
 
         function utilLoad(config) {
-            // 2. utill
             if (undefined == global._logger) {
-                global._logger = require('../../common/util/logger').createLogger(config);
+                global._logger = require('../../../common/util/logger').createLogger(config);
             }
-            global._util = require('../../common/util/util');
+            global._util = require('../../../common/util/util');
         }
 
         function errLoad() {
-            // error
             global._err = require('../../common/server/base/error');
             global._erremit = _err.errorEvent;
             global._errcode = _err.errcode;
         }
 
         function enumLoad() {
-            // enums
             global._protocol = require('../../common/server/base/protocol').protocol;
             global._eCdType = require('../../common/server/base/enums').eCdType;
         }
+
         // json data load
         async function dataLoad(config) {
-            // 슬롯머신 데이터 로드
             //global._dtShop = new DtXXX(config.dataPath);
             //await global._dtShop.loadData();
         }
 
         async function dbLoad(config) {
             // redis connection
-            global._redis = require('../../common/database/redis/base/redisClient');
+            global._redis = require('../../../common/database/redis/base/redisClient');
             global._redis.initialize(config.redis.host, config.redis.port);
             // mysql connection pool
-            global._pool = require('../../common/database/mysql/base/dbPool');
+            global._pool = require('../../../common/database/mysql/base/dbPool');
             await global._pool.poolsInit(config.db);
         }
 

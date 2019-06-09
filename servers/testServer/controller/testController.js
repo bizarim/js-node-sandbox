@@ -6,14 +6,8 @@
 const CController = require('./base/CController');
 
 exports.execute = async function (res, body) {
-    try {
-        const process = new testController();
-        await process.execute(res, body);
-    }
-    catch (ex) {
-        var a = 0;
-    }
-
+    const process = new testController();
+    await process.execute(res, body);
 }
 
 class testController extends CController {

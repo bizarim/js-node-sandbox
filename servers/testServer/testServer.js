@@ -1,6 +1,6 @@
 /*
-*	envdev.js
-*   개발 환경 시작 진입점
+*	testServer.js
+*   was 시작 진입점
 */
 
 (async (path = './config.json') => {
