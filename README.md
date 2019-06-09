@@ -1,5 +1,9 @@
 # node js 로 만드는 Web Application Server
 
+## package 설치
+```md
+npm install
+```
 
 ### 구조
 
