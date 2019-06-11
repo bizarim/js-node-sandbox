@@ -33,4 +33,4 @@ npm install
 
 
 ### server class diagrams
-![server](/common/database/redis/server.png)
+![server](/common/server.png)
