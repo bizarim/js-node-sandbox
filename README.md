@@ -27,5 +27,10 @@ npm install
 ### database class diagrams
 ![databaseClassDiagrams](/common/database/mysql/databaseClassDiagrams.png)
 
+
 ### redis class diagrams
 ![redisClassDiagrams](/common/database/redis/redisClassDiagrams.png)
+
+
+### server class diagrams
+![server](/common/database/redis/server.png)
